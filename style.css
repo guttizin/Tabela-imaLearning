@@ -50,6 +50,15 @@ th {
     color: #999999;
     font-weight: bold;
     text-align: center;
+    width: 10px;
+}
+
+th:nth-child(2){
+    width: auto;
+}
+
+th:nth-last-child(1){
+    min-width: 70px;
 }
 
 table tbody tr:nth-child(4) {
