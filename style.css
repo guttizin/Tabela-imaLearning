@@ -1,4 +1,4 @@
-:root{
+:root {
     --table-border: #DDDDDD;
     --azul-marinho: #003366;
     --azul-celeste: #1398BE;
@@ -13,44 +13,50 @@
 
 * {
     margin: 0;
-    padding:0;
+    padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
+body {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
 }
-main{
+
+main {
     /* apenas para demonstrar que table está centralizada */
-    margin: 50px;
+    margin: 20px;
 }
 
-table{
+table {
     border: 1px solid var(--table-border);
     border-collapse: collapse;
 }
-thead{
-    border-bottom: 1px solid #dddddd;;
+
+thead {
+    border-bottom: 1px solid #dddddd;
+    ;
 }
-td, th {
+
+td,
+th {
     padding: 8px;
 }
+
 th {
-    /* item b */
     font-size: 13px;
     color: #999999;
     font-weight: bold;
     text-align: center;
 }
 
-table tbody tr:nth-child(4){
+table tbody tr:nth-child(4) {
     border-bottom: 2px solid #CCCCCC;
 }
-table tbody tr:nth-child(16){
+
+table tbody tr:nth-child(16) {
     border-bottom: 2px solid #CCCCCC;
 }
 
@@ -61,81 +67,97 @@ td {
     border-bottom: 1px solid #dddddd;
 }
 
-td:nth-child(odd){
+td:nth-child(odd) {
     background-color: #F7F7F7;
 }
 
-td:nth-child(1){
+td:nth-child(1) {
     background-color: unset;
 }
 
-/* pontos */
-table tbody td:nth-child(3){
+table tbody td:nth-child(3) {
     font-weight: bold;
 }
-table tbody tr td:nth-child(1)::before{
+
+table tbody tr td:nth-child(1)::before {
     content: counter(posicao);
     counter-increment: posicao;
     font-size: 18px;
-    /* font-weight: bold; */
     text-align: center;
 }
-tbody tr td::before{
+
+tbody tr td::before {
     font-weight: bold;
 }
-tbody tr:nth-child(-n+3) td::before{
+
+tbody tr:nth-child(-n+3) td::before {
     color: var(--azul-marinho);
 }
-tbody tr:nth-child(4) td::before{
+
+tbody tr:nth-child(4) td::before {
     color: var(--azul-celeste);
 }
-tbody tr:nth-child(n+5) td::before{
+
+tbody tr:nth-child(n+5) td::before {
     color: var(--laranja);
 }
-tbody tr:nth-child(n+13) td::before{
+
+tbody tr:nth-child(n+13) td::before {
     color: var(--cinza);
 }
-tbody tr:nth-child(n+13) td::before{
+
+tbody tr:nth-child(n+13) td::before {
     color: var(--cinza);
 }
-tbody tr:nth-child(n+17) td::before{
+
+tbody tr:nth-child(n+17) td::before {
     color: var(--vermelho);
 }
-tfoot tr td{
+
+tfoot tr td {
     text-align: left;
 }
-tfoot tr td span{
+
+tfoot tr td span {
     font-size: 10px;
-    color: var(--legenda-sigla-sig);
+    color: var(--legenda);
     font-weight: bold;
-    padding-left: 15px;
+    text-align: left;
     text-transform: uppercase;
 }
 
-tfoot tr:nth-child(1) td span::before{
-    content: ' ';
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    transform: translate(-13px, 35%);
+tfoot tr td span.sigla {
+    color: var(--legenda-sigla-sig);
+    text-transform: none;
 }
 
-tfoot tr:nth-child(1) td span:nth-child(1):before{
+tfoot tr td span div.square{
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    display: inline-block;
+    background-color: #80808028;
+    margin-right: 3px;
+}
+
+tfoot tr td span:nth-child(1) .square  {
     background: var(--azul-marinho);
 }
-tfoot tr:nth-child(1) td span:nth-child(2):before{
+
+tfoot tr td span:nth-child(2) .square {
     background: var(--azul-celeste);
 }
-tfoot tr:nth-child(1) td span:nth-child(3):before{
+
+tfoot tr td span:nth-child(3) .square {
     background: var(--laranja);
 }
-tfoot tr:nth-child(1) td span:nth-child(4):before{
+
+tfoot tr td span:nth-child(4) .square {
     background: var(--vermelho);
 }
 
 
-.nome_time{
-    /* item C */
+.nome_time {
     font-size: 14px;
     color: #666666;
     font-weight: bold;
