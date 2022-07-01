@@ -24,6 +24,10 @@ body{
     justify-content: center;
     min-height: 100vh;
 }
+main{
+    /* apenas para demonstrar que table está centralizada */
+    margin: 50px;
+}
 
 table{
     border: 1px solid var(--table-border);
@@ -105,6 +109,7 @@ tfoot tr td span{
     color: var(--legenda-sigla-sig);
     font-weight: bold;
     padding-left: 15px;
+    text-transform: uppercase;
 }
 
 tfoot tr:nth-child(1) td span::before{
@@ -112,9 +117,22 @@ tfoot tr:nth-child(1) td span::before{
     position: absolute;
     width: 10px;
     height: 10px;
-    background: green;
     transform: translate(-13px, 35%);
 }
+
+tfoot tr:nth-child(1) td span:nth-child(1):before{
+    background: var(--azul-marinho);
+}
+tfoot tr:nth-child(1) td span:nth-child(2):before{
+    background: var(--azul-celeste);
+}
+tfoot tr:nth-child(1) td span:nth-child(3):before{
+    background: var(--laranja);
+}
+tfoot tr:nth-child(1) td span:nth-child(4):before{
+    background: var(--vermelho);
+}
+
 
 .nome_time{
     /* item C */
